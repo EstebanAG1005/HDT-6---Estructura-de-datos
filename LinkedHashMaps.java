@@ -1,40 +1,33 @@
 import java.io.*; 
-import java.util.*;
 import java.util.LinkedHashMap;
 
 
 public class LinkedHashMaps {
     
-    public void readerInstructor() throws IOException
-    {
-        try
+    public void link() throws IOException{
+        String filePath = "cards_desc.txt";
+        LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
+    
+        String line;
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        while ((line = reader.readLine()) != null)
         {
-          BufferedReader in = new BufferedReader( new FileReader("cards_desc.txt"));
-              
-             Map<String, String> instructors = new LinkedHashMap<String, String>();
-              
-            String line;
-            String[] values;
- 
-            while(((line = in.readLine()) != null))
+            String[] parts = line.split("\\|", 2);
+            if (parts.length >= 2)
             {
-                line = in.readLine();
-                values = line.split("|");
-                String ID = values[0];
-                String name = values[1];
-                 
-                instructors.put(ID, name);
+                String key = parts[0];
+                String value = parts[1];
+                map.put(key, value);
+            } else {
+                System.out.println("ignoring line: " + line);
             }
- 
         }
-        catch (FileNotFoundException e)
+    
+        for (String key : map.keySet())
         {
-      e.printStackTrace();
+            System.out.println(key + ":" + map.get(key));
         }
-        catch (IOException e)
-        {
-        e.printStackTrace();
-      }
+        reader.close();
+    }
     }
 
-}

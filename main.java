@@ -20,14 +20,16 @@ public class main {
                 op = sc.nextInt();
 
                 if (op == 1){
-                    
+                    Hashmap hash = new Hashmap();
+                    hash.hash();
                 }
                 else if(op == 2){
-                    
+                    TreeMaps tree = new TreeMaps();
+                    tree.tree();
                 }
                 else if(op == 3){
                     LinkedHashMaps link = new LinkedHashMaps();
-                    link.readerInstructor();
+                    link.link();
             
                 }
                 else if(op == 4){

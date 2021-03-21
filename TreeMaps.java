@@ -1,30 +1,30 @@
 import java.io.*; 
-import java.util.*;
 import java.util.TreeMap;
 
 public class TreeMaps {
-    public void leer(String[] args) throws IOException {
-        String inputfile = args[0];
-        String outputfile = args[1];
+    public void tree() throws IOException{
+        String filePath = "cards_desc.txt";
+        TreeMap<String, String> map = new TreeMap<String, String>();
     
-        Map<String, Integer> map = new TreeMap<String, Integer>();
-    
-        Scanner scanner = new Scanner(new File(inputfile));
-        while (scanner.hasNext()) {
-          String word = scanner.next();
-          Integer count = map.get(word);
-          count = (count == null ? 1 : count + 1);
-          map.put(word, count);
+        String line;
+        BufferedReader reader = new BufferedReader(new FileReader(filePath));
+        while ((line = reader.readLine()) != null)
+        {
+            String[] parts = line.split("\\|", 2);
+            if (parts.length >= 2)
+            {
+                String key = parts[0];
+                String value = parts[1];
+                map.put(key, value);
+            } else {
+                System.out.println("ignoring line: " + line);
+            }
         }
-        scanner.close();
     
-        List<String> keys = new ArrayList<String>(map.keySet());
-        Collections.sort( keys );
-    
-        PrintWriter out = new PrintWriter(new FileWriter(outputfile));
-        for (String key : keys)
-          out.println(key + " : " + map.get(key));
-        out.close();
+        for (String key : map.keySet())
+        {
+            System.out.println(key + ":" + map.get(key));
+        }
+        reader.close();
     }
-}
-     
+    }
