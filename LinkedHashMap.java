@@ -1,3 +1,3 @@
-public class LinkedHashMap {
+public class LinkedHashMap <E> {
     
 }

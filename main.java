@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class main {
     public static void main(String[] args) {
 
@@ -19,16 +20,20 @@ public class main {
                 op = sc.nextInt();
 
                 if (op == 1){
-
+                    
                 }
                 else if(op == 2){
-
+                    
                 }
                 else if(op == 3){
-
+                    LinkedHashMaps link = new LinkedHashMaps();
+                    link.readerInstructor();
+            
                 }
                 else if(op == 4){
-
+                    salir = false;
+                    System.out.println("Gracias por usar nuestro programa");
+                    System.exit(0);
                 }
                 else{
                     System.out.println("Solo puede ingresar numeros del 1 al 4\n");
