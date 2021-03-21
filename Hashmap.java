@@ -1,3 +1,3 @@
-public class Hashmap {
+public class Hashmap <E> {
     
 }
