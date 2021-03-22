@@ -10,6 +10,8 @@ import java.util.Scanner;
 public class Hashmap {
     HashMap<String, String> map = new HashMap<String, String>();
     HashMap<String, String> col = new HashMap<String, String>();
+    HashMap<String, String> repetidos = new HashMap<String, String>();
+
     Scanner sc = new Scanner(System.in);
 
  public void hash() throws IOException{
@@ -40,12 +42,31 @@ public void ordenar(){
 		list.sort(Entry.comparingByValue());
 		list.forEach(System.out::println);
 }
-public void buscar(){
+/*public void buscar(){
     System.out.println("Que carta desea agregar a su coleccion: ");
     String busqueda = sc.nextLine();
     if(map.containsKey(busqueda)){
-        col.put(busqueda);
-    }
-} 
+        col.put(busqueda + ":" + map.get(busqueda));
+    }*/
+/*public void contar(){
+    String element = "";
+    String elementTwo = "";
+    
+    for (HashMap.Entry<String, String> entry : map.entrySet()) 
+    {
+        int count = 0;
+        element = entry.getValue();
+        
+        // extraer la cantidad de veces que existe la clave
+        // si no existe la clave se retorna 0 por defecto
+        int cuenta = repetidos.(element,0);
+        // incrementar la cuenta
+        cuenta++;
+        // actualizar la cuenta para esa clave
+        repetidos.putAll(element);
+        
+    }*/
 }
+
+
 
