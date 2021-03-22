@@ -1,10 +1,10 @@
-public class Factory <E>{
+public class Factory{
     
     
     public Hashmap getHashmaps(int op) {
-        // seleccion de la implementacion a utilizar:
+        //seleccion de la implementacion a utilizar:
             if (op == 1){
-                return new Hashmap(); //regresa ArrayList
+                return new Hashmap(); //regresa Hashmap
             }
             return null;
        }

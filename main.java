@@ -22,10 +22,14 @@ public class main {
                 if (op == 1){
                     Hashmap hash = new Hashmap();
                     hash.hash();
+                    System.out.println("Ordenado");
+                    hash.ordenar();
                 }
                 else if(op == 2){
                     TreeMaps tree = new TreeMaps();
                     tree.tree();
+                    System.out.println("Ordenado");
+                    tree.ordenar();
                 }
                 else if(op == 3){
                     LinkedHashMaps link = new LinkedHashMaps();
