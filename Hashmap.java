@@ -43,7 +43,3 @@ public void ordenar(){
 		list.forEach(System.out::println);
 }
 }
-
-
-
-
