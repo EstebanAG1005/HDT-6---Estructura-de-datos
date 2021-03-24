@@ -115,7 +115,7 @@ public class ejecucion {
      * @param nombre: El nombre de la carta.
      * @retur: El tipo de carta.
      */
-    public String mostrarTipo(String nombre) {
+    public String mostrarPorTipo(String nombre) {
         
         boolean encontrado = false;
         String tipo="";
@@ -216,7 +216,7 @@ public class ejecucion {
      * Orden todas las cartas existentes por tipo.
      * @return: string de la lista de cartas.
      */
-    public String imprimirTipolista(){
+    public String imprimirCartasOrdenadas(){
         String lista = "";
         String monstruos="";
         String hechizos="";
@@ -251,7 +251,7 @@ public class ejecucion {
     /**
      * Imprimie todas las cartas existentes en forma de lista.
      */
-    public void imprimirTodas(){
+    public void imprimirCartas(){
                         
         for (Map.Entry<String, String> i :  MapCartas.entrySet()) {
             

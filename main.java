@@ -1,3 +1,10 @@
+/**
+ * Main del programa
+ * HDT#6 - Estructura de Datos
+ * @author Esteban Aldana Guerra 20591
+ * @author Javier Valle 20159
+ */
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
@@ -71,38 +78,38 @@ public class main {
                 System.out.print("Ingrese el nombre de la carta que desea agregar a su coleccion: ");
                 nombre = sc.nextLine();
                 nombre = sc.nextLine();
-                mazo = ej.agregarCarta(nombre, mazo);
+                mazo =ej.agregarCarta(nombre, mazo);
 
             }
             else if (op == 2){
                 System.out.print("Ingrese el nombre de la carta a mostrar (Tipo): ");
                 nombre = sc.nextLine();
                 nombre = sc.nextLine();
-                String tipo = ej.mostrarTipo(nombre);
+                String tipo =ej.mostrarPorTipo(nombre);
                 System.out.println("\nLa carta es de tipo: " + tipo);
 
             }
             else if (op == 3){
                 System.out.println("Usted tiene en este momento: ");
-                String lista = ej.mostrarMazo(mazo);
+                String lista =ej.mostrarMazo(mazo);
                 
                 System.out.println("\nUsted posee actualmente: \n");
                 System.out.println(lista);
             }
             else if (op == 4){
                 System.out.println("Usted tiene en este momento (Ordenadas Por tipo): ");
-                String lista = ej.imprimirPorTipo(mazo);
+                String lista =ej.imprimirPorTipo(mazo);
                 
                 System.out.println("\nUsted posee actualmente: \n");
                 System.out.println(lista);
             }
             else if (op == 5){
                 System.out.println("Nombre y tipo de cartas existentes ");
-                ej.imprimirTodas();
+               ej.imprimirCartas();
             }
             else if (op == 6){
                 System.out.println("Nombre y tipo de cartas existentes (Ordenadas por tipo) ");
-                String resultado = ej.imprimirTipolista();
+                String resultado =ej.imprimirCartasOrdenadas();
                 System.out.println(resultado);
             }
             else if (op == 7){
