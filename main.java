@@ -54,7 +54,7 @@ public class main {
                 }
             }
             catch (Exception e) {
-                System.out.println("Solo se pueden ingresar numeros\n");
+                System.out.println("Solo se pueden ingresar números\n");
                 sc.next();
             }
         }

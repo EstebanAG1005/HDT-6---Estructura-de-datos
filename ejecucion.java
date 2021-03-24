@@ -183,10 +183,12 @@ public class ejecucion {
         String hechizos="";
         String trampas="";
         
-        if (mazo.isEmpty()) return "Ninguna carta";
+        if (mazo.isEmpty()) return "Ninguna carta"; //Si el mazo está vacío, entonces se le indica que no hay cartas en el mazo. 
         
         else {
             
+            //Clasificando el tipo cartas del mazo.
+
             for (Cartas i: mazo) {
                 
                 String tipo = i.getTipo();
@@ -205,11 +207,11 @@ public class ejecucion {
                 }                
             }
             
-            lista = monstruos + hechizos + trampas;
+            lista = monstruos + hechizos + trampas; //Concatenando.
             
         }
        
-        return lista;
+        return lista; //Retorno con el string que posee los tipos de las cartas ordenadas por tipo.
     }
     
     /**
@@ -231,7 +233,9 @@ public class ejecucion {
             Map.Entry e = (Map.Entry)it.next();
             nombre = (String) e.getKey();
             tipo = (String) e.getValue();
-            
+
+            //Ordenando las cartas por tipo y nombre. 
+
             if (tipo.equals("Monstruo")) {
                     
                     monstruos += tipo+ " | "+nombre+ "\n";
@@ -245,12 +249,12 @@ public class ejecucion {
                     trampas += tipo+ " | "+nombre+ "\n";
                 }      
         }
-        lista = monstruos + hechizos + trampas;
-        return lista;
+        lista = monstruos + hechizos + trampas; //Concatenando. 
+        return lista; //Return de la lista ordenada y concatenada.
     }
     
     /**
-     * Imprime las Cartas leidas solo desde el archivo 
+     * Imprime las Cartas leídas solo desde el archivo 
      */
     public void imprimirCartas(){
                         
@@ -259,7 +263,7 @@ public class ejecucion {
             String key = i.getKey();
             String value = i.getValue();
             
-            System.out.println(key + " | " + value);
+            System.out.println(key + " | " + value); //Impresión de las cartas del archivo, primero su nombre y luego el tipo.
             
         }        
     }
