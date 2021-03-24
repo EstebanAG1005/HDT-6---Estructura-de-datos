@@ -97,15 +97,15 @@ public class ejecucion {
                 
                 MapCartas.remove(key);
                 
-                System.out.println("\nCarta agregada a su mazo!");
+                System.out.println("\n¡La carta ya está agregada a tu mazo!");
                 break;
                 
             }       
         }
 
-        if (!encontrado) System.err.println("\nLa carta ingresada no existe o ya esta en su mazo");
+        if (!encontrado) System.err.println("\nLa carta ingresada no existe o ya está agregada a tu mazo");
         
-        return mazo;
+        return mazo; //Retornando el mazo del usuario.
         
     }    
     
@@ -121,7 +121,8 @@ public class ejecucion {
         
         for (Map.Entry<String, String> i :  listaCartas.entrySet()) {
             
-            String key = i.getKey();
+            //Obteniendo las cartas que están en el archivo.
+            String key = i.getKey(); 
             String value = i.getValue();
             
             if (nombre.equals(key)) {
@@ -135,7 +136,7 @@ public class ejecucion {
         if (!encontrado) {
             
             tipo = "N/A";
-            System.err.println("No se encontro la carta ingresada");
+            System.err.println("No se encontró la carta.......");
             
         }
         
@@ -152,7 +153,7 @@ public class ejecucion {
         String lista="";
         int contador = 0;
         
-        if (mazo.isEmpty()) {
+        if (mazo.isEmpty()) { //Si en caso el mazo está vacío, entonces se dice que no hay cartas.
             
             return "Ninguna carta";
             
