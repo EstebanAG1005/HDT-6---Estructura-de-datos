@@ -1,3 +1,10 @@
+/**
+ * Clase que se encargar de ejecutar los metodos descritos en el programa
+ * HDT#6 - Estructura de Datos
+ * @author Esteban Aldana Guerra 20591
+ * @author Javier Valle 20159
+ */
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -30,8 +37,7 @@ public class ejecucion {
         int largo;        
         int cont = 0;
         
-       //Este bloque de codigo tiene como objetivo leer la cadena de texto que
-       //el usuario haya establecido previamente
+       //Lee el archivo de Texto
         try {
 
             f = new File (archivo);            
@@ -52,20 +58,13 @@ public class ejecucion {
                 tipo = linea.substring(pos+1,largo);
                                   
                 MapCartas.put(nombre, tipo);
-                listaCartas.put(nombre, tipo);
-                
-//                Activar linea solo si se quiere medir la complejidad del metodo
-//                if (cont>6999) break;
-                                
+                listaCartas.put(nombre, tipo);                
             }                           
-                       
-//            System.out.println(cont);
+                  
             br.close();
             fr.close();                        
 
         }
-        //Si el archivo se modifica manualmente o sucede cualquier otros tipo de
-        //error, este sera comunicado con el usuario
         catch (Exception e) {
 
             System.err.println("Se produjo un error: " + e);                 
@@ -113,7 +112,7 @@ public class ejecucion {
     /**
      * Muestra el tipo de carta que el usuario especifique.
      * @param nombre: El nombre de la carta.
-     * @retur: El tipo de carta.
+     * @return: El tipo de carta.
      */
     public String mostrarPorTipo(String nombre) {
         
@@ -144,7 +143,7 @@ public class ejecucion {
     }
     
     /**
-     * Imprime las cartas actuales que posee el usuario.
+     * Imprime las cartas que tiene el usuario
      * @param mazo: La lista de cartas que posee el usuario.
      * @return: El string de las cartas.
      */
@@ -172,7 +171,7 @@ public class ejecucion {
     }
     
     /**
-     * Imprime el mazo de las cartas que posee el usuario por tipo.
+     * Imprime el mazo del usuario
      * @param mazo: La lista tipo cartas del usuario.
      * @return: El string de las cartasa ordenadas por tipo.
      */
@@ -213,9 +212,10 @@ public class ejecucion {
     }
     
     /**
-     * Orden todas las cartas existentes por tipo.
+     * Ordena a las cartas del archivo en orden del tipo
      * @return: string de la lista de cartas.
      */
+
     public String imprimirCartasOrdenadas(){
         String lista = "";
         String monstruos="";
@@ -249,7 +249,7 @@ public class ejecucion {
     }
     
     /**
-     * Imprimie todas las cartas existentes en forma de lista.
+     * Imprime las Cartas leidas solo desde el archivo 
      */
     public void imprimirCartas(){
                         

@@ -1,3 +1,10 @@
+/**
+ * Clase que sirve como interfaz para ejecutar los metodos
+ * HDT#6 - Estructura de Datos
+ * @author Esteban Aldana Guerra 20591
+ * @author Javier Valle 20159
+ */
+
 public class Cartas{
  
     private String nombre;

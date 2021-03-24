@@ -1,3 +1,9 @@
+/**
+ * Clase Factory
+ * HDT#6 - Estructura de Datos
+ * @author Esteban Aldana Guerra 20591
+ * @author Javier Valle 20159
+ */
 
 import java.util.*;
 import java.util.TreeMap;
